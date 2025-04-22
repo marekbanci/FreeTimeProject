@@ -1,4 +1,4 @@
-package com.example.freetimeproject.data.network.response
+package com.example.freetimeproject.data.response
 
 import kotlinx.serialization.Serializable
 
