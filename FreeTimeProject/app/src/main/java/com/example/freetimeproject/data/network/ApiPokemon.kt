@@ -11,4 +11,5 @@ interface ApiPokemon {
         @Query("limit") limit: Int = 20,
         @Query("offset") offset: Int = 0
     ) : PokemonResponse
+
 }

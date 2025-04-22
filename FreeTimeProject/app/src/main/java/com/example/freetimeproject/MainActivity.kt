@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.lifecycleScope
 import com.example.freetimeproject.data.network.ApiClient
+import com.example.freetimeproject.nav.AppNavHost
 import com.example.freetimeproject.ui.theme.FreeTimeProjectTheme
 import kotlinx.coroutines.launch
 
@@ -24,29 +25,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             FreeTimeProjectTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                   AppNavHost()
                 }
             }
         }
-
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FreeTimeProjectTheme {
-        Greeting("Android")
     }
 }
