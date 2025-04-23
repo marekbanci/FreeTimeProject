@@ -1,6 +1,5 @@
 package com.example.freetimeproject.screens
 
-import android.util.Log
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -18,22 +17,20 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.freetimeproject.components.PokemonListItem
 import com.example.freetimeproject.viewmodels.PokemonListVM
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun PokemonList(navController: NavController, viewModel: PokemonListVM) {
+fun PokemonList(navController: NavController, viewModel: PokemonListVM = hiltViewModel()) {
     val pokemons by viewModel.pokemons.observeAsState(emptyList())
     val listState = rememberLazyListState()
 
     LaunchedEffect(Unit) {
         if (pokemons.isEmpty()) {
-            Log.d("OrdersScreen", "Načítám první stránku...")
-
             viewModel.fetchPokemons()
-
         }
     }
 
@@ -59,7 +56,7 @@ fun PokemonList(navController: NavController, viewModel: PokemonListVM) {
         ) {
             items(pokemons) { item ->
                 PokemonListItem(item.name, onClick = {
-
+                    navController.navigate("detail/${item.name}")
                 })
             }
         }

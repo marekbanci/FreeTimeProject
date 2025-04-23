@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.freetimeproject.data.model.ApiResources
 import com.example.freetimeproject.data.network.ApiPokemon
-import com.example.freetimeproject.data.response.Pokemons
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -15,8 +15,8 @@ class PokemonListVM @Inject constructor(
     private val apiPokemon: ApiPokemon
 ) : ViewModel() {
 
-    private val _pokemons = MutableLiveData<List<Pokemons>>(emptyList())
-    val pokemons: LiveData<List<Pokemons>> get() = _pokemons
+    private val _pokemons = MutableLiveData<List<ApiResources>>(emptyList())
+    val pokemons: LiveData<List<ApiResources>> get() = _pokemons
 
     private val _offset = MutableLiveData<Int>(0)
     val offset: LiveData<Int> get() = _offset
@@ -32,4 +32,5 @@ class PokemonListVM @Inject constructor(
             }
         }
     }
+
 }

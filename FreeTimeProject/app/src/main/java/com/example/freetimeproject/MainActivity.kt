@@ -16,8 +16,10 @@ import androidx.lifecycle.lifecycleScope
 import com.example.freetimeproject.data.network.ApiClient
 import com.example.freetimeproject.nav.AppNavHost
 import com.example.freetimeproject.ui.theme.FreeTimeProjectTheme
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
