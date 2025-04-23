@@ -1,43 +1,43 @@
 package com.example.freetimeproject.data.model
 
-import kotlinx.serialization.SerialName
+import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class AnimatedSprites(
-    @SerialName("back_default")
+    @SerializedName("back_default")
     val backDefault: String? = null,
 
-    @SerialName("back_female")
+    @SerializedName("back_female")
     val backFemale: String? = null,
 
-    @SerialName("back_shiny")
+    @SerializedName("back_shiny")
     val backShiny: String? = null,
 
-    @SerialName("back_shiny_female")
+    @SerializedName("back_shiny_female")
     val backShinyFemale: String? = null,
 
-    @SerialName("back_gray")
+    @SerializedName("back_gray")
     val backGray: String? = null,
 
-    @SerialName("back_transparent")
+    @SerializedName("back_transparent")
     val backTransparent: String? = null,
 
-    @SerialName("front_default")
+    @SerializedName("front_default")
     val frontDefault: String? = null,
 
-    @SerialName("front_female")
+    @SerializedName("front_female")
     val frontFemale: String? = null,
 
-    @SerialName("front_shiny")
+    @SerializedName("front_shiny")
     val frontShiny: String? = null,
 
-    @SerialName("front_shiny_female")
+    @SerializedName("front_shiny_female")
     val frontShinyFemale: String? = null,
 
-    @SerialName("front_gray")
+    @SerializedName("front_gray")
     val frontGray: String? = null,
 
-    @SerialName("front_transparent")
+    @SerializedName("front_transparent")
     val frontTransparent: String? = null
 )

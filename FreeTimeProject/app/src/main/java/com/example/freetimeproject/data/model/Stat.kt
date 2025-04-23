@@ -1,9 +1,10 @@
 package com.example.freetimeproject.data.model
 
-import kotlinx.serialization.SerialName
+import com.google.gson.annotations.SerializedName
+
 
 data class Stat(
-    @SerialName("base_stat")
+    @SerializedName("base_stat")
     val baseStat: Int,
     val effort: Int,
     val stat: ApiResources
