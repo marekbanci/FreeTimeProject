@@ -1,10 +1,11 @@
 package com.example.freetimeproject.data.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-
+@Serializable
 data class HeldItems (
     val item: ApiResources,
-    @SerializedName("version_details")
+    @SerialName("version_details")
     val versionDetails: List<ApiResources>
 )

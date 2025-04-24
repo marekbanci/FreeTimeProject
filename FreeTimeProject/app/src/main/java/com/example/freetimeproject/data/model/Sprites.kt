@@ -1,26 +1,25 @@
 package com.example.freetimeproject.data.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class Sprites(
-    @SerializedName("back_default")
+    @SerialName("back_default")
     val backDefault: String? = null,
-    @SerializedName("back_female")
+    @SerialName("back_female")
     val backFemale: String? = null,
-    @SerializedName("back_shiny")
+    @SerialName("back_shiny")
     val backShiny: String? = null,
-    @SerializedName("back_shiny_female")
+    @SerialName("back_shiny_female")
     val backShinyFemale: String? = null,
-    @SerializedName("front_default")
+    @SerialName("front_default")
     val frontDefault: String? = null,
-    @SerializedName("front_female")
+    @SerialName("front_female")
     val frontFemale: String? = null,
-    @SerializedName("front_shiny")
+    @SerialName("front_shiny")
     val frontShiny: String? = null,
-    @SerializedName("front_shiny_female")
+    @SerialName("front_shiny_female")
     val frontShinyFemale: String? = null,
     val other: Other
-    //val stats: List<Stat>
 )

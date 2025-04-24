@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    kotlin("plugin.serialization")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
 }
@@ -76,12 +77,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // Retrofit & OkHttp
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation(libs.retrofit)
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
-
-    // Kotlin Serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.56.1")

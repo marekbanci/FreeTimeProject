@@ -1,14 +1,14 @@
 package com.example.freetimeproject.data.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class Other(
-    @SerializedName("dream_world")
-    val dreamWorld: Images,
-    val home: Images,
-    @SerializedName("official-artwork")
-    val officialArtwork: Images,
-    val showDown: Images
+    @SerialName("dream_world")
+    val dreamWorld: AnimatedSprites,
+    val home: AnimatedSprites,
+    @SerialName("official-artwork")
+    val officialArtwork: AnimatedSprites,
+    val showDown: AnimatedSprites
 )
